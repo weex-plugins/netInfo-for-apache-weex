@@ -48,6 +48,8 @@ netInfo ，用户可以用这个模块监听网络变化和获取网络状态
         - `result {string}`：结果三种类型 `success`, `cancel`, `error`
         - `data {string}`：设置的结果，如stop。
 
+## 平台
+ios：齐山(完成),android（待完成）
 
 #### 示例
 
