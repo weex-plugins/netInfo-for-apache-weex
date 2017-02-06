@@ -1,0 +1,15 @@
+{
+  "name": "weex-netInfo",
+  "version": "0.0.0",
+  "description": "Weex  netInfo",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Weex",
+    "Plugin",
+    "module",
+    "netInfo"
+  ],
+  "author": "sunjjbobo@163.com"
+}

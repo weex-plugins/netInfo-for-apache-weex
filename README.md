@@ -1,1 +1,1 @@
-# netInfo
+# weex-netInfo
