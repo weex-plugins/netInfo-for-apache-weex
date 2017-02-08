@@ -8,7 +8,6 @@
 
 #import <SystemConfiguration/SystemConfiguration.h>
 #import "WXNetInfoModule.h"
-#import "WXAssert.h"
 
 static NSString *const WXReachabilityStateUnknown = @"unknown";
 static NSString *const WXReachabilityStateNone = @"none";
@@ -43,8 +42,8 @@ WX_EXPORT_METHOD(@selector(stopMonitor:))
 - (void)startMonitor:(NSDictionary *)options callback:(WXModuleKeepAliveCallback)callback
 {
     _host = [options objectForKey:@"url"];
-    WXAssertParam(_host);
-    WXAssert(![_host hasPrefix:@"http"], @"Host value should just contain the domain, not the URL scheme.");
+//    WXAssertParam(_host);
+//    WXAssert(![_host hasPrefix:@"http"], @"Host value should just contain the domain, not the URL scheme.");
     _status = WXReachabilityStateUnknown;
     _reachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, _host.UTF8String ?: "apple.com");
     SCNetworkReachabilityContext context = { 0, ( __bridge void *)self, NULL, NULL, NULL };
@@ -102,8 +101,8 @@ static void WXReachabilityCallback(__unused SCNetworkReachabilityRef target, SCN
 - (NSString *)currentReachabilityStatus:(NSDictionary *)options
 {
     _host = [options objectForKey:@"url"];
-    WXAssertParam(_host);
-    WXAssert(![_host hasPrefix:@"http"], @"Host value should just contain the domain, not the URL scheme.");
+//    WXAssertParam(_host);
+//    WXAssert(![_host hasPrefix:@"http"], @"Host value should just contain the domain, not the URL scheme.");
     _status = WXReachabilityStateUnknown;
     _reachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, _host.UTF8String ?: "apple.com");
     NSAssert(_reachability != NULL, @"currentNetworkStatus called with NULL SCNetworkReachabilityRef");

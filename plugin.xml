@@ -20,7 +20,7 @@
 
 <plugin xmlns="http://www.w3.org/ns/widgets"
     id="weex-netinfo"
-    version="0.1.4">
+    version="0.1.6">
     <name>weex-netInfo</name>
     <description></description>
     <license>Apache 2.0</license>
@@ -29,8 +29,8 @@
     <issue>https://*</issue>
      <!-- ios -->
     <platform name="ios">
-        <config-file target="config.xml" parent="/*">
-            <feature name="module">
+        <config-file target="WeexpluginConfig.xml" parent="/*">
+            <feature name="WXNetInfoModule">
                 <param name="category" value="module" />
                 <param name="ios-package" value="WXNetInfoModule" />
                 <param name="api" value="netInfo" />
