@@ -20,7 +20,7 @@
 
 <plugin xmlns="http://www.w3.org/ns/widgets"
     id="weex-netinfo"
-    version="0.1.3">
+    version="0.1.4">
     <name>weex-netInfo</name>
     <description></description>
     <license>Apache 2.0</license>
@@ -29,18 +29,15 @@
     <issue>https://*</issue>
      <!-- ios -->
     <platform name="ios">
-
         <config-file target="config.xml" parent="/*">
-            <feature name="netInfo">
+            <feature name="module">
+                <param name="category" value="module" />
                 <param name="ios-package" value="WXNetInfoModule" />
+                <param name="api" value="netInfo" />
             </feature>
-            <preference name="CameraUsesGeolocation" value="false" />
         </config-file>
-
         <header-file src="ios/WXNetInfoModule.h" />
         <source-file src="ios/WXNetInfoModule.m" />
-
-        <framework src="AVFoundation.framework" />
 
     </platform>
 
