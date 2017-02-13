@@ -20,7 +20,7 @@
 
 <plugin xmlns="http://www.w3.org/ns/widgets"
     id="weex-netinfo"
-    version="0.1.6">
+    version="0.1.7">
     <name>weex-netInfo</name>
     <description></description>
     <license>Apache 2.0</license>

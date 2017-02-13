@@ -104,7 +104,9 @@ static void WXReachabilityCallback(__unused SCNetworkReachabilityRef target, SCN
 //    WXAssertParam(_host);
 //    WXAssert(![_host hasPrefix:@"http"], @"Host value should just contain the domain, not the URL scheme.");
     _status = WXReachabilityStateUnknown;
-    _reachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, _host.UTF8String ?: "apple.com");
+    if(!_reachability){
+        _reachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, _host.UTF8String ?: "apple.com");
+    }
     NSAssert(_reachability != NULL, @"currentNetworkStatus called with NULL SCNetworkReachabilityRef");
     SCNetworkReachabilityFlags flags;
     NSString *status = WXReachabilityStateUnknown;
